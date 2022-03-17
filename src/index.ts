@@ -5,11 +5,19 @@ import noTestOnly from './rules/noTestOnly';
 
 export default {
     rules: {
-        noTestOnly,
-        noPagePause,
+        noTestOnly: {
+            ...noTestOnly,
+        },
+        noPagePause: {
+            ...noPagePause,
+        },
     },
     configs: {
-        recommended,
-        strict,
+        recommended: {
+            ...recommended,
+        },
+        strict: {
+            ...strict,
+        },
     },
 };
