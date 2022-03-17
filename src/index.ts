@@ -5,8 +5,8 @@ import { noTestOnly } from './rules/noTestOnly';
 
 export = {
     rules: {
-        noTestOnly,
-        noPagePause,
+        'no-test-only': noTestOnly,
+        'no-page-pause': noPagePause,
     },
     configs: {
         recommended,
