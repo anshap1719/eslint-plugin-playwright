@@ -8,6 +8,7 @@
         "test": "cspell \"**/*\" --no-progress",
         "format": "prettier --write \"src/**/*.{ts,tsx,json}\"",
         "prepare": "husky install",
+        "postinstall": "npm run build",
         "postversion": "git push --tags && git push"
     },
     "author": "Anshul Sanghi",
