@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/utils';
 import createRule from '../util/createRule';
 
-const noTestOnly = createRule({
+export const noTestOnly = createRule({
     name: 'no-test-only',
     meta: {
         docs: {
@@ -32,5 +32,3 @@ const noTestOnly = createRule({
         };
     },
 });
-
-export default noTestOnly;
