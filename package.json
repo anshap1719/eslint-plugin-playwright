@@ -5,7 +5,9 @@
     "main": "dist/index.js",
     "scripts": {
         "build": "tsc",
-        "test": "cspell \"**/*\" --no-progress",
+        "test": "cspell \"**/*\" --no-progress && npm run build && npm run unit-test",
+        "unit-test": "jest",
+        "test-watch": "jest --watch",
         "format": "prettier --write \"src/**/*.{ts,tsx,json}\"",
         "prepare": "husky install",
         "postinstall": "npm run build",
