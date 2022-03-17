@@ -1,15 +1,9 @@
-import recommended from './configs/recommended';
-import strict from './configs/strict';
-import { noPagePause } from './rules/noPagePause';
-import { noTestOnly } from './rules/noTestOnly';
+import rules from './rules';
+import configs from './configs';
 
-export = {
-    rules: {
-        'no-test-only': noTestOnly,
-        'no-page-pause': noPagePause,
-    },
-    configs: {
-        recommended,
-        strict,
-    },
+const configuration = {
+    rules,
+    configs,
 };
+
+export = configuration;

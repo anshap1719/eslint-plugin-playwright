@@ -32,4 +32,4 @@ const noPagePause = createRule({
     },
 });
 
-export { noPagePause };
+export default noPagePause;

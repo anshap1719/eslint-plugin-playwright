@@ -33,4 +33,4 @@ const noTestOnly = createRule({
     },
 });
 
-export { noTestOnly };
+export default noTestOnly;
