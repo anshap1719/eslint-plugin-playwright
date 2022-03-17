@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/utils';
 import createRule from '../util/createRule';
 
-export const noTestOnly = createRule({
+export = createRule({
     name: 'no-test-only',
     meta: {
         docs: {

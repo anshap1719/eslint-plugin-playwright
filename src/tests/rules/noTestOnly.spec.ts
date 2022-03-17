@@ -1,5 +1,5 @@
 import { RuleTester } from '@typescript-eslint/utils/dist/ts-eslint';
-import { noTestOnly } from '../../rules/noTestOnly';
+import noTestOnly from '../../rules/noTestOnly';
 
 const ruleTester = new RuleTester();
 
