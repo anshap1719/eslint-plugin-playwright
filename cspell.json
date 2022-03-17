@@ -9,7 +9,8 @@
         "Anshul",
         "Sanghi",
         "Parens",
-        "tscache"
+        "tscache",
+        "estree"
     ],
     "ignorePaths": [
         "*.snap",

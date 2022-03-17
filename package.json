@@ -36,9 +36,11 @@
     },
     "dependencies": {
         "@babel/preset-typescript": "^7.16.7",
+        "@typescript-eslint/parser": "^5.15.0",
         "@typescript-eslint/scope-manager": "^5.15.0",
         "@typescript-eslint/utils": "^5.15.0",
-        "eslint-utils": "^3.0.0"
+        "eslint-utils": "^3.0.0",
+        "node-estree": "^3.1.0"
     },
     "jest": {
         "coveragePathIgnorePatterns": [

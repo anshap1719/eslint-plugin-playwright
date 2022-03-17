@@ -1,5 +1,6 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/utils';
 import createRule from '../util/createRule';
+import isCodeInsideTestBlock from '../util/isCodeInsideTestBlock';
 
 const noPagePause = createRule({
     name: 'no-page-pause',
@@ -14,10 +15,14 @@ const noPagePause = createRule({
         type: 'problem',
         schema: [],
     },
-    defaultOptions: [],
+    defaultOptions: [{ parser: '@typescript-eslint/parser' }],
     create(context) {
         return {
             MemberExpression(node) {
+                if (!isCodeInsideTestBlock(context)) {
+                    return;
+                }
+
                 if (
                     node.property.type === AST_NODE_TYPES.Identifier &&
                     node.property.name === 'pause'
