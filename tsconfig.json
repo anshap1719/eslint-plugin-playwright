@@ -10,7 +10,7 @@
         "moduleResolution": "node",
         "declaration": true,
         "declarationMap": true,
-        "outDir": "build",
+        "outDir": "dist",
         "downlevelIteration": false,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
