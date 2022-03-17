@@ -1,4 +1,15 @@
-import rules from './rules';
-import configs from './configs';
+import recommended from './configs/recommended';
+import strict from './configs/strict';
+import noPagePause from './rules/noPagePause';
+import noTestOnly from './rules/noTestOnly';
 
-export = { rules, configs };
+export default {
+    rules: {
+        noTestOnly,
+        noPagePause,
+    },
+    configs: {
+        recommended,
+        strict,
+    },
+};
