@@ -1,5 +1,5 @@
 import { RuleTester } from '@typescript-eslint/utils/dist/ts-eslint';
-import noPagePause from '../../rules/noPagePause';
+import { noPagePause } from '../../rules/noPagePause';
 
 const ruleTester = new RuleTester();
 

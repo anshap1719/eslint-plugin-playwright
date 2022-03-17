@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/utils';
 import createRule from '../util/createRule';
 
-export = createRule({
+const noPagePause = createRule({
     name: 'no-page-pause',
     meta: {
         docs: {
@@ -31,3 +31,5 @@ export = createRule({
         };
     },
 });
+
+export { noPagePause };
