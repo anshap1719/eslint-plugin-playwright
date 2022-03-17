@@ -1,0 +1,5 @@
+/node_modules
+/tscache
+/*.d.ts
+/*.d.ts.map
+/*.js

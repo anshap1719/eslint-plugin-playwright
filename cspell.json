@@ -1,0 +1,17 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": ["corp-terms"],
+  "words": [],
+  "ignorePaths": [
+    "*.snap",
+    ".git",
+    "*.js",
+    "*.d.ts",
+    "*.d.ts.map",
+    "node_modules",
+    ".vscode",
+    "package-lock.json",
+    "tscache"
+  ]
+}
