@@ -1,6 +1,6 @@
 {
     "name": "@anshulsanghi/eslint-plugin-playwright",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "ESLint Plugin For Playwright Tests",
     "main": "dist/index.js",
     "repository": {
