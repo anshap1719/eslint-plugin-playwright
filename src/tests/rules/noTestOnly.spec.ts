@@ -7,18 +7,26 @@ const ruleTester = new RuleTester({
 
 ruleTester.run('no-test-only', noTestOnly, {
     invalid: [
-        { code: 'test.only()', errors: [{ messageId: 'general' }] },
+        // { code: 'test.only()', errors: [{ messageId: 'general' }] },
+        // {
+        //     code: 'test.describe("", () => { abc.only() })',
+        //     errors: [{ messageId: 'general' }],
+        // },
         {
-            code: 'test.describe("", () => { abc.only() })',
+            code: 'test.only("", () => {  })',
+            errors: [{ messageId: 'general' }],
+        },
+        {
+            code: 'test.describe.only("", () => {  })',
             errors: [{ messageId: 'general' }],
         },
     ],
     valid: [
-        { code: 'test()' },
-        { code: 'only()' },
-        {
-            code: 'var abc = test; abc.only()',
-        },
-        { code: 'abc.only()' },
+        // { code: 'test()' },
+        // { code: 'only()' },
+        // {
+        //     code: 'var abc = test; abc.only()',
+        // },
+        // { code: 'abc.only()' },
     ],
 });

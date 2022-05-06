@@ -30,6 +30,22 @@ const noTestOnly = createRule({
         // TODO: Do not warn if `forbidOnly` is set to false in playwright config.
         return {
             MemberExpression(node) {
+                if (
+                    node.type === AST_NODE_TYPES.MemberExpression &&
+                    node.object.type === AST_NODE_TYPES.MemberExpression &&
+                    node.object.property.type === AST_NODE_TYPES.Identifier &&
+                    (node.object.property.name === 'describe' ||
+                        node.object.property.name === 'test') &&
+                    node.property.type === AST_NODE_TYPES.Identifier &&
+                    node.property.name === 'only'
+                ) {
+                    context.report({
+                        messageId: 'general',
+                        node,
+                    });
+                    return;
+                }
+
                 const isInsideTestBlock = isCodeInsideTestBlock(context);
 
                 if (
